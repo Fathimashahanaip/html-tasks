@@ -1,0 +1,386 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    #search1 {
+  background-image: url('https://cdn1.iconfinder.com/data/icons/hawcons/32/698627-icon-111-search-512.png');
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 30px;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  /* margin-bottom: 12px; */
+}
+#free{
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Adobe_Creative_Cloud_rainbow_icon.svg/1200px-Adobe_Creative_Cloud_rainbow_icon.svg.png");
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 30px;
+  width: 100%;
+  font-size: 16px;
+  /* padding: 12px 20px 12px 40px; */
+  border: 1px solid #ddd;
+  margin-left: 1cm;
+ 
+    
+
+}
+.nav-item{
+    margin-left: 0.5cm;
+}
+.back{
+    background-color:	#FA8072;
+    margin-left: 3cm;
+    margin-right: 3cm;
+    color: white;
+    margin-top: 0.5cm;
+    padding-top: 2cm;
+}
+.sec-body{
+    background-color: white;
+    margin-left: 2cm;
+    margin-right: 2cm;
+    margin-top:2cm ;
+
+}
+
+.card{
+  border-color: palevioletred;
+}
+ul{
+  color: palevioletred;
+}
+footer{
+  /* background-image: url("https://png.pngtree.com/thumb_back/fh260/background/20190221/ourmid/pngtree-science-and-technology-hd-particle-float-image_17150.jpg"); */
+  background-repeat: repeat;
+  background-size: 1100px 300px;
+  padding-top: 1cm;
+  background-color:#00004d;
+}
+header{
+  position: fixed;
+}
+
+</style>
+    <header>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary bg-light" style="color: black; height: 3cm;">
+        <div class="container-fluid">
+          <a class="navbar-brand" style="margin-bottom: 1.5cm;" href="#"><img src="https://download.logo.wine/logo/Behance/Behance-Logo.wine.png" width="130px" height="80px"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#" style="color: black;">ForYou</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" style="color: black;">Discover</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" style="color: black;">Livestreams</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" style="color: black;">Hire</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" style="color: black;">Jobs</a>
+              </li>
+              
+
+
+            
+            <form class="d-flex" role="search" >
+              <input class="form-control me-2 rounded-pill" id="search1" type="search" placeholder="Search" aria-label="Search" style="width: 10cm;">
+              <!-- <button class="btn btn-outline-success" type="submit">Search</button> -->
+            </form>
+            <li class="nav-item">
+                <a class="nav-link disabled"> <i class="bi bi-bell-fill"> </i></a>
+              </li>
+              <!-- <li class="nav-item"> -->
+                <button type="submit" class="btn btn-light rounded-pill" style="height: 1cm; width: 2cm;"> Log In </button>
+                <button type="submit" class="btn btn-primary rounded-pill" style="height: 1cm; width: 2cm; margin-left:  1cm;"> Sign UP </button>
+                <button type="submit" class="btn btn-light rounded-pill" style="height: 1cm; " id="free"> Free Trial </button>
+              <!-- </li> -->
+              <!-- <li class="nav-item">
+                <a class="nav-link disabled"><button type="submit" class="btn btn-primary" value="Sign Up"></button></a>
+              </li> -->
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAflBMVEX///8AAACEhITj4+P8/Pz29vZAQEAbGxvg4OC4uLisrKyYmJiIiIiSkpKnp6eNjY1ubm6enp7T09N0dHTr6+uysrJlZWVVVVXIyMjx8fG+vr4xMTFRUVF+fn7Z2dk5OTlISEgkJCQQEBAdHR0qKio9PT00NDQTExNnZ2ddXV0tuVTwAAAMLElEQVR4nO2da3uqOhCF26qtvVlvbcVai+5e//8fPEKSyYUkLjAJch7Wt70thBdIZjLJDBcXvXr16tWrVy9My0EjjYdRT78MSPh+2UifIOGs2enfAxJeNbuEO/D02b7R6a9aJ7wZoedv9o60T4hfwbijhDVGgryThK81Glh3knBVp4WbDhK+1WrhvoOEk1otLDtImNVrYto5wrrNz+s38dAu4bZuG98dI9zUbuOuY4S1TAVTtwj3DRqp7Zy2Sjhr0Eht57RVwpqmgumvQ4TN5qZ1ndM2CWubilLDz84Q5g2beewM4bphMzWd0/YIfxq389sRwvvG7dRzTtsjbGQqmN46Qbg4oaFazmlrhM1MBVOtyGlbhPlJLdVxTtsivD2ppTrOaUuE/+BAt12bsyd8OrGpGs5pS4QnL3mdO+HLyW3hkdN2COcnt5WdN+F1gMbgyGkrhOiaqE+wc9oGIb4m6tM12Nqpw7YqlDDMXUWd0zYIx0FaG50vYZ010QDNtUDYINBt1eBcCf8Faw9zTtMT1lsT9QlzTtMTBjEVpbDIaXLCkEuykHOanPCU6IUpKHKamjCUqWBCIqepCUOZCibEOU1M2DzQbRcQOU1M2GRN1CfAOU1MiJoK9GUenhshuia6gt/mhzMjRE3FCxznOB45TUqIbp8Z1IhVvZ4VIbomWpwInUQedU5TEu7ATfmjfY0LG+7OiPARPE9pAvbg7TjqnKYkRE0F2wmMBuSORTMSEv6Cp1mxP9+hzR5xThMSoqZCjI6o1T/inKYjzMGzkIX7Q9v1R07TEaJronJ9FzUYz9520fENkZdwB44zyho9GjkeeZMUkhGiDU3kIT/ohpQgDZ/c0AA8iRpdQsNyXuc0FSHqZ67Ug+B0E1/kNBUhOlfQk7dQg+FzThMRok/DeN/gvfztE6Iu2MI4Du29ngzaNIQ/qKkwD0SDAp7IaRpC1LJVHsUeNRjuZf00hKB3MqwGB1GD4XZOkxCiHqZlSPxGp4lO5zQJITro2/J80WOdkdMUhGhocGs7GF3ocEZOUxCifck0FUyowXC1noIQ7EqOjVzodmnXsn4CQnRN1BVSQg2GIyEqASFqKlxr1uhqjsM5jU+ImopbByBc+8RiTdMQooFud0kI9Ax25zQ6IRoUtJoKJtRg2J3T6IRoL/JFPdGQlNU5jU7YdFahCjUY1vcgNiF6cf6kQnQ9wDbWxCYEA91Df9US9FW3OafNc+SqshCig4Q/qAvv9rM5p5EJ0UD3sS3NqMGwLOvHJUSN9dGdP2hIyhI5jUuI9vLju7fqLlylIgSdZmAHHjomrypHRiVE10SPb4rBZxiVQTkqIWoqAED4QivOaUzCL/A4LHMCPFllWT8mIWoqPiBC9GxmLCQiIZonWh0crMrBqzAtT0RCdAH9BSNsuHwVkxAMkoGJIZeXU/AyDA8wHiFqKvC8TDC1dvSTiBAMVkOmggn1kPTriEaIRi8ml7jAU+rvfTTCZ/CgXQ1C9Jzasn40QnBWAZoKpg/wQrSTxiJE10TrVe5CDcYuASFoKmpWX0PHZ9U5jUSIBrrty01ugTdOjdxFIoQ3wtw69LyzEqIGQ7lzcQjh3a9u2UvQoHujFec0DmGAPFFHlB/dmPMVmRDdXuDTlw3w8hM8WjqnUQiDFOt3ODuowYhLGKSkgGMPPjpKP8QkhDdo++WYN4K3bxmTsGlBREMOhw6dWAtvKWTKIydEA93H5FitQXcBruMRBjvlk/0hogbjOxrhCQURdTmc1m/w8FkswlMKIhpybN8GDUYWizBgSQFHqBgdq6dxCPOAJ3SlpYEzjG0cwkCmgsmx8xedXucxCNE8UUyOlVM0meY5BmHInQ8HOQqVggajTIgKTRjyG2AXziwDNCT1FJ4Qjbyjcq0OgzGEQXjC0wsiGnLE4lCD8RqasN6XfxC5MprA3rAKTXha7VybXNmT6CT7JjBhUFPB5CqKDM4wZkEJ30NWuRJybSYCg12jsIRo4kAtObZ/o8k0i5Bz/KAOG8m1/AYajHlIHyRCL7xw763NwYsKW3srigZju9q+rl69evXq1atXr169evXq1atXr169evUKq+Wc6+hfbvkfRlk7iCgK2h9bTBryXVxBPzOWQmJX0NFPlQ2vz4pwOV2Q/JfeVUI1B9C/wNBVQnXl1r9E2VVCtYyKP5Wno4T6mp/3TztKqNft8nbEjhLqeareTQUdJfynEXo3MHWTkHfDGzHe+P62m4Q8U+JVvKy+jdHdJORkT2LA8W0H7SYhv5aJSCfwFWTvJOGS7+ydiwSyt8pOm2z1PFuXL6+dcLCe3E/W2oyKCFla0Hw9u1vZdkMP1rOrx7u4u2hEwlJGOYSGRRyLak4TK+HonjY/v8sjNUIx53o1be2aSsE8hPtYZkU8m+djSHZR74hKfb3rkfDRJaG+zWsqnr9COFCcQs3YDrS6JvGeI39Cv/JitTwaLX87N59hZlbr+hybhCNtf7vi2Jv7GMNvd+XXyM//KDOX1I5olL3aGYSWMqZbnfDe+BPaMFhNHQ6+KZtpLk+fiR2+ctOyq9QsJ7R9Rm0/0ggrGQp8vMmqqQuhEgUNiYrHBZXYiE4dMfupXIZKaN9qOdUIK+Ibd20JNiE3l0pxqjInQgwq1BEdOYWc0JV8sPUSsjeEOuH+6kl29SiEKpRods9/U+vtvP2qRb5KQhka2KyyuXworybhza+azF4ONqJ3Loo3cyl8/xiDzVw9Nz0U3hFlvt2mCHtuJWNBKCfObGOvfGe3GuG+OHcmH1TxuohhhtcTFVV44K+c1JC4LDbICwRePIeGwZyNAXSvS0Liz/m5aNx51Ai5Jy8RMzklFWPaVP4UWuKq2L/Ee8c6onxIYrpBQbmCkBJkxChPfStXCUU292gn/ueWsn7JBV4bpwoofuY/vSFWRZYS0KUvLob4glD8+jE0fz08GklIj4Xyvu7J8spBm/9HuE+5C4nbzl0N6ojlS0sdS27rF6VLD4RksWVCDIVD5pJQJq5RKvQL3UlpeLlZCpiWzCX6kngNNSbqOdIrFs/hQHir/e2FdksmklBJCBJLGW/kKb1MuX754w9U4EGRqPXwwvQrhpLyXtLIUb0jB0LCkTEB6ohP1vkhJXu7v6QT9lPnF54vHJSlPsVQem0lJI9Vrp/RS35lzg9L0Tvh/mjuR2jHzV3aaqAQKjdWISR7LzsTDb4L6zOkbur+7sBXaEJ3tdW1QvhXPeBASNdrIZxaCckHdBMGf4bu4l3FACH6TW4lpOuVb2kmj7YR0lN3E4buh85uyAZ5QajUQlIIybzJkYb64YOVUJiaHzdh6LHUV7c6U5wWeYRiLegNl34IuQj3VkLB9UWsi8VU02/o+ZOvPv6t8lbJAJJ4rQ+ElPMr/ZCJPJgIZb44TbAXdJqAVTnsEghfVGpuTTbgShmHJIN4rQ+E9AJIBirWrnpt9OtKnk68CnGmvIqEH6n4HVRN9EYx4JT0Tf+j+qWyxjL9/UghpBgaVZKa03nQryg0FQ19ysSTdokcOqIsViIiZGSpC8KpeTi99FN1bpHzX2VobUhR6KAfOLaIepLaHehOr9VIGoOQzlZBSIfzzx4Of5RDlfkh86ZlqdnphT6VlAoeFRbdUPuWHHW+K20kelmv7pRk+4JwSPPh7wIxI7ezsC5DJW7xtZ6vlajkSr25l1+3o4OVH46y2/fwcycRi9ZiB/QyffjqIpdxGqXQx/TxSq6zFrO+obN0O4vGqrHE783mo/x36IHHUQWOGl56PoNQ1pxxFDArS2nK/myKPSiroUJLuqKi0VtfMdgo/10N2/KuybqevQxG2atH3K7szF/fzGbMexNQ5DrrHZzevSJ0a97qKf91z9xtWzyVRSZEVOb5n/Gz8B4ym8cYmFDcReOjldQRy+5pFLoYCX4+oajWweChF1FqfWusC8gS2GPLOx62IhB1QzM2Qu1lFYY5OWZiQmF+20qENDI6QnvOash3WfW/w9Z5UJwoXdQw658y0Ps2lks15Kpu1eucUmBNEG7VITc3npFRfngTuJDFfMI0M18N8cOETxqyp9Ks5OWdGMzYb0rodvxY2r7Pzb1yptFE/t3gKT+8s7s/C8DqfVNQ/ry9LtZt7iYeLgcDXxcpf/c6JNlg4ApnZ8vlMou4xt2rV69evXr9X/UfBVahzYOy4woAAAAASUVORK5CYII=" height="80px" width="80px" style="padding-bottom: 1cm;">
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          
+        </div>
+      </nav>
+</header>
+  </head>
+  <body>
+    <img src="https://img.freepik.com/free-photo/young-beautiful-woman-pink-warm-sweater-natural-look-smiling-portrait-isolated-long-hair_285396-896.jpg?w=2000" style="border-radius: 100%; margin-left: 4cm;" height="70px" width="70px">
+    <b>Personal Portfolio HTML, CSS, Bootstrap Website</b>
+    <div class="back">
+        <center>
+            <h1>
+ Personal Portfolio HTML, CSS Website<br>
+Link Here.... mahbubulanis.com<br>
+Home Page
+            </h1>
+        </center>
+<div class="sec-body">
+    <div class="sec-nav">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#"><img src="https://logos.textgiraffe.com/logos/logo-name/Shahana-designstyle-popstar-m.png" height="90px" width="90px" style="margin-left: 3cm;"></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item" style="margin-left: 2cm;">
+                    <a class="nav-link active" aria-current="page" href="#" style="color: black;" >Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#" style="color: black;">About</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link disabled"style="color: black;">Services</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link disabled"style="color: black;">Projects</a>
+                  </li>
+
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"style="color: black;">
+                      Pages
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li><a class="dropdown-item" href="#">Another action</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link disabled"style="color: black;">Contacts</a>
+                  </li>
+                  <button type="submit" class="btn btn-danger" style="margin-left: 4cm;">Hire Me</button>
+                </ul>
+              </div>
+            </div>
+          </nav>
+          </div>
+          <div class="sec-body row  bg-light" style="color: black;" >
+            
+            <div class="column" style="margin-top: 3cm; margin-left: 1cm; margin-right: 1cm;">
+                <h4>Hello World!I am</h4><br><h1 style="font-size: 50px;"><b>Mern-Stack<br> Developer</b></h1><br>
+                <button type="button" class="btn btn-danger btn-lg " style="width: 6cm; padding-left: 1cm;">Download Resume</button>
+                <button type="button" class="btn btn-lg" style="width: 6cm; background-color:#00004d; color: white;">Contact Me</button>
+                <br>
+      
+                <h5 style="margin-top: 3cm;">find me on<br></h5>
+                <h2>
+                <i class="bi bi-facebook"></i>
+                <i class="bi bi-whatsapp"></i>
+                <i class="bi bi-instagram"></i>
+                <i class="bi bi-linkedin"></i>
+                </h2>
+      
+                
+
+
+
+            </div>
+           
+            <div class="column">
+                <img src="https://img.freepik.com/free-photo/young-beautiful-woman-pink-warm-sweater-natural-look-smiling-portrait-isolated-long-hair_285396-896.jpg?w=2000" height="600px" width="455px" style="border-radius: 50%; margin-left: 0cm;">
+
+            </div>
+
+
+          </div>
+
+
+          <div class="row" style="margin-left: 3cm; margin-top: 2cm;">
+
+            <div class="column bg-light">
+              <img src="https://media.istockphoto.com/id/1369508766/photo/beautiful-successful-latin-woman-smiling.jpg?b=1&s=170667a&w=0&k=20&c=owOOPDbI6VOp1xYA4smdTNSHxjcJGRtGfVXx24g6J4c=" height="300px" width="300px">
+
+            </div>
+
+            <div class="column" style="color: black;margin-left: 2cm; margin-top: 2cm;">
+              About Me<br>
+              <h1>I'm a Professional <br>Mern-Stack Developer</h1>
+              Hi ,I'm Fathima Shahana IP . I have Over 4 Months of Experiance<br> with Mern-stack Development. If you are looking<br> for a hardworking highly skilled mern-stack developer<br> the you are at right place
+
+            </div>
+
+          </div>
+          <center>
+
+          <div class="bg-light" style="color: black; margin-top: 3cm;"><h1 style="color:#FA8072; font-family:Trattatello, fantasy; padding-top: 2cm;">Qualification & Skill</h1><br>
+          <div class="row" style="margin-top: 3cm;">
+            
+            <div class="column" style="margin-left: 5cm;">
+              <h2 style="color: #00004d;">Educations...</h2><br>
+          <div class="card w-200" style="margin-top: 0.5cm; ">
+            <div class="card-body">
+              <h3 class="card-title">MCA</h3>
+              <p class="card-text" style="color: palevioletred;">College of Engineering Vadakara</p>
+              <p class="card-text">2020-2022</p>
+            </div>
+          </div>
+          
+          <div class="card w-200" style="margin-top: 0.5cm;">
+            <div class="card-body">
+              <h5 class="card-title">B.Sc Mathematics</h5>
+              <p class="card-text"style="color: palevioletred;">University of calicut</p>
+              <p class="card-text">2017-2020</p>
+           
+            </div>
+          </div>
+
+          <div class="card w-200"style="margin-top: 0.5cm;">
+            <div class="card-body">
+              <h5 class="card-title">Plus Two</h5>
+              <p class="card-text"style="color: palevioletred;">GHSS Poonoor</p>
+              <p class="card-text">2015-2017</p>
+
+            </div>
+          </div>
+
+          <div class="card w-200"style="margin-top: 0.5cm;">
+            <div class="card-body">
+              <h5 class="card-title">SSLC</h5>
+              <p class="card-text"style="color: palevioletred;">GHSS Poonoor</p>
+              <p class="card-text">2015</p>
+              
+            </div>
+          </div>
+          </div>
+          
+
+       
+
+
+
+          <div class="column" style="margin-left: 7cm; margin-top: 4.5cm;">
+           <h2 style="color: #00004d;"> My Skills... </h2><br>
+            <div class="card w-700 h-400" style="width: 200px;">
+              <div class="card-body">
+                <ul>
+                  <li>Html</li>
+                  <li>CSS</li>
+                  <li>BootStrap</li>
+                  <li>c</li>
+                  <li>Python</li>
+                  <li>MongoDB</li>
+                  <li>Express</li>
+                  <li>React</li>
+                  <li>Node</li>
+                  <li>MySql</li>
+                  <li>java</li>
+                  <li>Android</li>
+                </ul>
+  
+                
+              </div>
+  
+  
+  
+            </div>
+
+          </div>
+          </div>
+          </center>
+          <footer style="height: 10cm; margin-top: 2cm;">
+            <div class="row"  style="margin-top: 1cm;">
+              <div class="column" style="background-color: palevioletred; border-radius: 50%; height: 3cm; width: 3cm; margin-left: 2cm; margin-top: 2cm; ">
+                <img src="https://t3.ftcdn.net/jpg/03/93/21/72/360_F_393217240_zfkRyEmOdzBx5VuSm36iNT1Jz36oZmpP.jpg" style="border-radius: 50%; height: 2cm; width: 2cm;">
+
+
+              </div>
+              <div class="column" style="background-color:pink; border-radius: 50%; height: 1cm; width: 1cm; margin-left: 2cm; margin-top: 0.5cm; "></div>
+              <center >
+              <div class="column" style="margin-left: 2cm;">
+                
+             
+                  <h2> Lets Say Hi<br>shahanaip222@gmail.com</h2>
+                  <br>
+                  <div>
+    
+                 
+    <a href=""><img src="facebook.png" height="30px" width="30px" style="margin-left: 0.5cm;"></a>
+    <a href=""><img src="instagram.png" height="30px" width="30px"style="margin-left: 0.5cm;"></a>
+    <a href=""><img src="linkedin.png" height="30px" width="30px"style="margin-left: 0.5cm;"></a>
+                </center>
+                <div class="column" style="background-color:palevioletred; border-radius: 50%; height: 3cm; width: 3cm; margin-left: 2cm; margin-top: 2cm; " >
+                  <img src="https://t3.ftcdn.net/jpg/03/93/21/72/360_F_393217240_zfkRyEmOdzBx5VuSm36iNT1Jz36oZmpP.jpg" style="border-radius: 50%; height: 2cm; width: 2cm;">
+                </div>
+
+                <div class="column" style="background-color:pink; border-radius: 50%; height: 1cm; width: 1cm; margin-left: 2cm; margin-top: 0.5cm; "></div>
+
+              </div>
+              <br>
+              <center>
+              <hr color="white" width="50%">
+              <i class="bi bi-c-circle"></i>Fathima shahana,2021 All rights Reserved
+              </center>
+              
+
+
+
+            </div>
+
+          </footer>
+
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+    </div>
+ 
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
